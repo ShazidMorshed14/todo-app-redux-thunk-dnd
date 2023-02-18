@@ -9,6 +9,7 @@ import {
   getMyStoreState,
   handleDragEndStore,
 } from "./features/todos/todoSlice";
+import { toast } from "react-toastify";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,7 +38,8 @@ function App() {
 
       setText("");
     } else {
-      alert("Please Add a task First");
+      //alert("Please Add a task First");
+      toast.error("Please Add a task First!");
     }
   };
 
